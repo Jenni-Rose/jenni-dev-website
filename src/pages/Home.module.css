@@ -1,0 +1,88 @@
+/* src/pages/Home.module.css */
+
+/* Page layout */
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 2) Header: center everything*/
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Profile picture: 300×300px circle with silver border, spins once on load */
+.avatar {
+  width: 300px;               
+  height: 300px;
+  border-radius: 50%;          
+  object-fit: cover;           
+  margin-bottom: 1.5rem;
+  border: 5px solid silver;    
+
+  /* Runs spinOnce once when the page loads */
+  animation: spinOnce 3s cubic-bezier(0.33,1,0.68,1) both;
+}
+
+/* spinOnce keyframes: 5 full rotations (360°×5) */
+@keyframes spinOnce {
+  0%   { transform: scale(1) rotateY(0deg); }
+  100% { transform: scale(1) rotateY(1800deg); }
+}
+
+/* Title: slide up on load */
+.title {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  animation: slideInUp 0.6s ease-out both;
+}
+
+/* Subtitle: slide up with slight delay */
+.subtitle {
+  font-size: 1rem;
+  color: var(--highlight);
+  margin: 0;
+  animation: slideInUp 0.6s ease-out both;
+  animation-delay: 0.2s;
+}
+
+/* slideInUp keyframes */
+@keyframes slideInUp {
+  0%   { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Get in touch button */
+.ctaButton {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--highlight);
+  color: var(--bg-color);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  border: none;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.2s, transform 0.2s;
+}
+.ctaButton:hover {
+  background-color: #e0b00a;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* Main placeholder grows to fill space */
+.main {
+  flex: 1;
+}
+
+/* Carousel sits at the bottom */
+.carousel {
+  margin-top: auto;
+  padding: 2rem 0;
+}

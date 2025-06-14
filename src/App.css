@@ -1,0 +1,9 @@
+/* src/App.css */
+
+/* max-width wrapper for site*/
+#root {
+  max-width: 1280px;      /* don’t let content stretch too wide */
+  margin: 0 auto;         /* centre the app horizontally */
+  padding: 2rem;          /* breathing room all around */
+  text-align: center;     /* centre text by default */
+}

@@ -1,0 +1,36 @@
+/* src/components/IconCarousel.css */
+
+/* Outer wrapper hides overflow so children can scroll past */
+.tech-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/* Inner row of items */
+.tech-carousel {
+  display: flex;            /* lay items out in a row */
+  flex-direction: row;      /* row direction */
+  align-items: center;      
+  white-space: nowrap;      /* prevent wrapping */
+  overflow-x: hidden;       /* hide scrollbars */
+  scrollbar-width: none;    /* firefox */
+}
+.tech-carousel::-webkit-scrollbar {
+  display: none;            /* chrome/safari */
+}
+
+/* 3) Individual icon containers */
+.tech-item {
+  flex: 0 0 auto;
+  margin: 0 20px;           /* space between icons */
+  text-align: center;
+}
+
+/* Caption under each icon */
+.tech-label {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-color, #EEF4F8);
+}

@@ -1,0 +1,69 @@
+/* src/pages/About.module.css */
+
+/* .page: keep content centered with max width */
+.page {
+    max-width: 800px;              /* don’t let the page get too wide */
+    margin: 0 auto;                /* center it in the browser */
+    padding: 2rem 1rem;            /* space around the edges */
+    font-family: var(--font-sans); /* use main site font */
+    color: var(--text-color);      /* use standard text colour */
+  }
+  
+  /* .header: fade in and centre the title section */
+  .header {
+    text-align: center;                   /* centre the heading and intro text */
+    margin-bottom: 2rem;                  /* space below before the next section */
+    animation: fadeIn 1s ease-out both;   /* smooth fade-in on load */
+  }
+  .title {
+    font-size: 2.5rem;             /* large heading text */
+    margin-bottom: 0.5rem;         /* small gap under the title */
+  }
+  .intro {
+    font-size: 1.1rem;             /* slightly bigger than body text */
+    line-height: 1.6;              
+  }
+  
+  /* .content: slide up text into place */
+  .content {
+    animation: slideUp 0.8s ease-out both;  /* text slides up on load */
+    animation-delay: 0.2s;                  /* small delay */
+    margin-bottom: 2rem;                    /* space under each text block */
+  }
+  .content p {
+    margin-bottom: 1rem;          /* space between paragraphs */
+    line-height: 1.6;             /* comfortable line spacing */
+  }
+  
+  /* .ctaWrapper: centre the “Get in touch” button and fade in */
+  .ctaWrapper {
+    text-align: center;                 /* centre the button */
+    margin: 3rem 0 1rem;                /* space above and below */
+    animation: fadeIn 1s ease-out both; /* fade in on load */
+  }
+  .ctaButton {
+    background: var(--highlight);               /* bright button background */
+    color: var(--bg-color);                     /* contrasting text colour */
+    padding: 0.75rem 1.5rem;                    /* click area */
+    border-radius: 4px;                         /* slightly rounded corners */
+    text-decoration: none;                      /* remove underline */
+    font-weight: 600;                           /* make button text bold */
+    transition: background 0.2s, transform 0.2s; /* smooth hover effects */
+  }
+  .ctaButton:hover {
+    background: #e0b00a;          /* darker shade on hover */
+    transform: translateY(-2px);    /* lift the button slightly */
+  }
+  
+  /* 6) Keyframes for fadeIn: fade from invisible to visible */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  
+  /* 7) Keyframes for slideUp: slide text from below into place */
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  

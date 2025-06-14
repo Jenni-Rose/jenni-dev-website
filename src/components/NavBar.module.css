@@ -1,0 +1,78 @@
+.navbar {
+  background-color: #10282A;        /* dark teal background for nav bar */
+  padding: 1rem 2rem;               /* 1rem top/bottom, 2rem left/right spacing */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);  /* subtle drop shadow underneath */
+}
+
+.container {
+  max-width: 1140px;                /* don’t stretch wider than this */
+  margin: 0 auto;                   /* center container horizontally */
+  display: flex;                    /* lay out children in a row */
+  justify-content: space-between;   /* push first child left, last child right */
+  align-items: center;              /* center items */
+}
+
+.brand {
+  font-family: 'IMFellEnglish', serif; /* custom serif font */
+  font-size: 1.5rem;                   /* larger text for my name */
+  color: #EEF4F8;                    /* off-white text color */
+  text-decoration: none;               /* remove underline from the link */
+  transition: transform 0.2s ease;     /* smooth grow effect on hover */
+}
+.brand:hover {
+  transform: scale(1.1);             /* grow 10% when hovered */
+  cursor: pointer;                   /* show pointer cursor */
+}
+
+.socialIcon {
+  margin-left: 0.5rem;               /* space between brand and social icons */
+}
+
+.links {
+  display: flex;                     /* line up nav links in a row */
+  gap: 2rem;                         /* 2rem space between each link */
+}
+
+.link {
+  color: #EEF4F8;                         /* off-white link color */
+  font-family: 'Josefin Sans', sans-serif;  /* sans-serif for links */
+  font-weight: 600;                         /* semi-bold text */
+  text-decoration: none;                    /* no underline */
+  position: relative;                       /* the underline (::after) position is relative to this link */
+  padding: 0.25rem 0.5rem;                  /* space around link text/icon */
+  transition: color 0.2s, transform 0.2s;   /* smooth color and lift on hover */
+  display: inline-flex;                     /* allow icon and text side-by-side */
+  align-items: center;                      
+}
+.link::after {
+  content: '';                       /* creates the underline element */
+  position: absolute;                /* position relative to the link */
+  left: 0; bottom: 0;                /* anchored at link’s bottom left */
+  height: 2px;                       /* underline thickness */
+  width: 0%;                         /* start with no width (hidden) */
+  background: #FFCA0B;             /* gold underline color */
+  transition: width 0.2s;            /* animate underline growth */
+}
+.link:hover {
+  color: #FFCA0B;                  /* switch text/icon to gold on hover */
+  transform: translateY(-2px);       /* lift link up slightly */
+}
+.link:hover::after {
+  width: 100%;                       /* expand underline to full width */
+}
+
+/* swap icon ↔ text on hover */
+.icon {
+  display: inline-block;             /* show icon by default */
+  font-size: 2rem;                   /* set icon size */
+}
+.text {
+  display: none;                     /* hide text label by default */
+  font-size: 1rem;                   /* text size when shown */
+}
+.link:hover .icon {
+  display: none;                     /* hide icon on hover */
+}
+.link:hover .text {
+  display: inline-block;             /* show text on hover */
+}

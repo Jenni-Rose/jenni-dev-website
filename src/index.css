@@ -1,0 +1,71 @@
+/* src/index.css */
+
+/* Google Font imports must come first */
+/* Josefin Sans */
+/*  IM Fell English  */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=IM+Fell+English:ital,wght@0,400;1,400&display=swap');
+
+/* CSS variables & base styles */
+:root {
+  --text-color:   #EEF4F8;
+  --bg-color:     #091819;
+  --highlight:    #FFCA0B;
+  --font-sans:    'Josefin Sans', sans-serif;
+  --font-serif:   'IM Fell English', serif;
+}
+
+/* Make box-sizing easier to work with everywhere */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling for anchor links (optional) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body resets and background */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Headings & paragraphs default spacing */
+h1, h2, p {
+  margin: 0 0 1rem;
+}
+
+/* Heading sizes & font choices */
+h1 {
+  font-size: 2.5rem;
+  /* Use your serif brand font for big headers */
+  font-family: var(--font-serif);
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Link styling */
+a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+/* Utility helpers */
+.text-center {
+  text-align: center;
+}
